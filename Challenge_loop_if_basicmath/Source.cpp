@@ -3,7 +3,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 int main()
 {
-	int x, y, n = 0, sul = 0;
+	int x, y, n = 0, sult = 0;
 	float sum = 0, aver = 0, sd;
 	scanf_s("%d %d", &x, &y);
 	if (x < y)
@@ -12,10 +12,10 @@ int main()
 		{
 			printf("%d ", x);
 			sum = sum + x;
-			sul = sul + pow(x, 2);
+			sult = sult + pow(x, 2);
 			n++;
 			aver = sum / n;
-			sd = sqrt(((n * sul) - pow(sum, 2)) / (n * (n - 1)));
+			sd = sqrt(((n * sult) - pow(sum, 2)) / (n * (n - 1)));
 		}printf("\nAverage = %.2f", aver);
 		printf("\nSD = %.2f", sd);
 	}
@@ -25,10 +25,10 @@ int main()
 		{
 			printf("%d ", x);
 			sum = sum + x;
-			sul = sul + pow(x, 2);
+			sult = sult + pow(x, 2);
 			n++;
 			aver = sum / n;
-			sd = (sqrt((n * sul) - pow(sum, 2) / n * (n - 1)));							// สูตร SD
+			sd = (sqrt((n * sult) - pow(sum, 2) / n * (n - 1)));							// สูตร SD
 		}printf("\nAverage = %.2f", aver);
 		printf("\nSD = %.2f", sd);
 	}
